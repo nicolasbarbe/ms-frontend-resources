@@ -1,4 +1,4 @@
-templateScript: /hello-magnolia/templates/components/quotation.ftl
+templateScript: /ms-discussions-resources/templates/components/quotation.ftl
 renderType: freemarker
-dialog: hello-magnolia:components/quotation
+dialog: ms-discussions-resources:components/quotation
 title: Quotation

@@ -1,11 +1,11 @@
-templateScript: /hello-magnolia/templates/pages/hello.ftl
+templateScript: /ms-discussions-resources/templates/pages/hello.ftl
 renderType: freemarker
 visible: true
 title: Hello template
-dialog: hello-magnolia:pages/hello
+dialog: ms-discussions-resources:pages/hello
 areas:
   main:
     renderType: freemarker
     availableComponents:
       quotation:
-        id: hello-magnolia:components/quotation
+        id: ms-discussions-resources:components/quotation
