@@ -5,7 +5,7 @@
    <head>
       <title>${title}</title>
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:200" type="text/css">
-      <link rel="stylesheet" href="${ctx.contextPath}/.resources/hello-magnolia/webresources/css/style.css">
+      <link rel="stylesheet" href="${ctx.contextPath}/.resources/ms-discussions-resources/webresources/css/style.css">
       [@cms.page /]
    </head>
    <body>
