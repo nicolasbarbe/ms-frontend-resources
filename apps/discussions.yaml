@@ -1,0 +1,46 @@
+label: Discussions
+icon: icon-forums
+name: discussions
+appClass: info.magnolia.ui.contentapp.ContentApp
+subApps:
+  browser:
+    label: Discussions
+    subAppClass: info.magnolia.ui.contentapp.browser.BrowserSubApp
+    class: info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor
+    contentConnector:
+      serviceName: discussions
+      class: info.magnolia.services.restutils.app.contentconnector.HttpContentConnectorDefinition
+    workbench:
+      editable: false
+      contentViews:
+        - name: list
+          class: info.magnolia.services.restutils.app.workbench.HttpResourceListPresenterDefinition
+          columns:
+            - name: id
+              label: Id
+              sortable: true
+              expandRatio: 1.0
+              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              propertyName: id
+              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition
+            - name: title
+              label: Title
+              sortable: false
+              expandRatio: 3.0
+              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              propertyName: title
+              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition
+            - name: initiator
+              label: Initiator
+              sortable: false
+              expandRatio: 2.0
+              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              propertyName: initiator
+              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition
+            - name: createdAt
+              label: Created At
+              sortable: false
+              expandRatio: 2.0
+              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              propertyName: createdAt
+              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition

@@ -1,0 +1,46 @@
+label: Users
+icon: icon-user-public
+name: users
+appClass: info.magnolia.ui.contentapp.ContentApp
+subApps:
+  browser:
+    label: Users
+    subAppClass: info.magnolia.ui.contentapp.browser.BrowserSubApp
+    class: info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor
+    contentConnector:
+      serviceName: users
+      class: info.magnolia.services.restutils.app.contentconnector.HttpContentConnectorDefinition
+    workbench:
+      editable: false
+      contentViews:
+        - name: list
+          class: info.magnolia.services.restutils.app.workbench.HttpResourceListPresenterDefinition
+          columns:
+            - name: id
+              label: Id
+              sortable: true
+              expandRatio: 2.0
+              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              propertyName: id
+              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition
+            - name: firstName
+              label: First Name
+              sortable: false
+              expandRatio: 2.0
+              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              propertyName: firstName
+              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition
+            - name: lastName
+              label: Last Name
+              sortable: false
+              expandRatio: 2.0
+              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              propertyName: lastName
+              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition
+            - name: memberSince
+              label: Member Since
+              sortable: false
+              expandRatio: 2.0
+              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              propertyName: memberSince
+              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition

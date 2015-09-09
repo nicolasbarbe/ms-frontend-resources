@@ -1,0 +1,15 @@
+templateScript: /ms-frontend-resources/templates/pages/prototype.ftl
+renderType: freemarker
+visible: true
+title: Prototype Template
+areas:
+  main:
+    type: single
+    renderType: freemarker
+    availableComponents:
+      discussionDetails:
+        id: ms-frontend-resources:components/discussionDetails
+      discussionList:
+        id: ms-frontend-resources:components/discussionList
+      discussionForm:
+        id: ms-frontend-resources:components/discussionForm

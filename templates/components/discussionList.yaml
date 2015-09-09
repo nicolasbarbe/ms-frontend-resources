@@ -1,0 +1,3 @@
+templateScript: /ms-discussions-resources/templates/components/discussionList.ftl
+renderType: freemarker
+title: List of discussions

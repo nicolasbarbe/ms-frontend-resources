@@ -1,4 +1,0 @@
-templateScript: /ms-discussions-resources/templates/components/quotation.ftl
-renderType: freemarker
-dialog: ms-discussions-resources:components/quotation
-title: Quotation
