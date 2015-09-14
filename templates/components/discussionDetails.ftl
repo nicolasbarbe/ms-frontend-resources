@@ -1,6 +1,6 @@
 [#assign id=ctx.getParameter("id")]
 
-[#assign discussion=httpfn.service("http://192.168.99.100:3004/", "v1", "discussions/"+id).GET()]
+[#assign discussion=httpfn.service("discussions").GET(id)]
 [#assign answerIds=discussion.answers]
 
 [#setting datetime_format="iso"]
@@ -32,7 +32,7 @@
         <!-- TODO Replace this stupid list with a bucket of comment -->
         [#list answerIds as answerId]
 
-          [#assign answer=httpfn.service("http://192.168.99.100:3007/", "v1", "answers/"+answerId).GET()]
+          [#assign answer=httpfn.service("answers").GET(answerId)]
 
 
           <li class="comment media">

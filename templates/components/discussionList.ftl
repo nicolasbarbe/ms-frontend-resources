@@ -1,4 +1,4 @@
-[#assign discussions=httpfn.service("http://192.168.99.100:3004/", "v1", "discussions").GET()![]]
+[#assign discussions=httpfn.service("discussions").GET()![]]
 
 [#setting datetime_format="iso"]
 
