@@ -1,4 +1,45 @@
-.container {
+.navbar {
+  height: 60px;
+  background-color: #689600;
+  color: #3E5900;
+  text-align: center;
+  border:none;
+  padding-right:30px;
+  padding-left:30px;
+  color: #3E5900;
+  margin-bottom:0px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #3E5900;
+
+}
+
+.searchAndAsk {
+    background-color: #EFF4E5;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+#logo {
+    width: 132px;
+    height: 44px;
+    position: absolute;
+    top: 7px;
+    left: 37px;
+}
+
+.navbar-brand span {
+  width: 132px;
+  position: absolute;
+  top: 14px;
+  left: 126px;
+  height: 44px;
+  color: #FFF;
+  font-size: 18pt;
+}
+
+.content{
   width:1000px;
 }
 
@@ -30,6 +71,16 @@
   padding-right: 25px;
 }
 
+.discussion {
+  margin-top:20px;
+}
+
+.youranswer {
+  border-top: 2px solid #E9E9E9;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
 .comment {
   border-top: 1px solid #E9E9E9;
   padding-top: 20px;
@@ -43,6 +94,10 @@
 .comment h4 {
   margin-bottom: 0px;
   margin-top: 0px;
+}
+
+.discussionList  p {
+padding-right: 100px;
 }
 
 .discussionList {

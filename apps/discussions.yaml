@@ -9,38 +9,81 @@ subApps:
     class: info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor
     contentConnector:
       serviceName: discussions
-      class: info.magnolia.services.restutils.app.contentconnector.HttpContentConnectorDefinition
+      class: info.magnolia.services.httputils.app.contentconnector.HttpContentConnectorDefinition
+    actions:
+      startDiscussion:
+        icon: icon-add-item
+        class: info.magnolia.ui.api.action.ConfiguredActionDefinition
+        name: startDiscussion
+        label: Start discussion
+      closeDiscussion:
+        icon: icon-unpublish
+        class: info.magnolia.ui.api.action.ConfiguredActionDefinition
+        name: closeDiscussion
+        label: Close discussion
+      listComments:
+        icon: icon-forums-app
+        class: info.magnolia.ui.api.action.ConfiguredActionDefinition
+        name: listComments
+        label: List comments
+    actionbar:
+      defaultAction: startDiscussion
+      sections:
+        - name: root
+          label: Discussions
+          groups:
+            - name: discussionActions
+              items:
+                - name: startDiscussion
+                - name: closeDiscussion
+            - name: commentActions
+              items:
+                - name: listComments
+          availability:
+            nodes: true
+            root: true
     workbench:
       editable: false
       contentViews:
         - name: list
-          class: info.magnolia.services.restutils.app.workbench.HttpResourceListPresenterDefinition
+          class: info.magnolia.services.httputils.app.workbench.HttpResourceListPresenterDefinition
           columns:
             - name: id
               label: Id
               sortable: true
               expandRatio: 1.0
-              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              formatterClass: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnFormatter
               propertyName: id
-              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition
+              class: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnDefinition
             - name: title
               label: Title
               sortable: false
               expandRatio: 3.0
-              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              formatterClass: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnFormatter
               propertyName: title
-              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition
+              class: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnDefinition
             - name: initiator
               label: Initiator
               sortable: false
               expandRatio: 2.0
-              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              formatterClass: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnFormatter
               propertyName: initiator
-              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition
+              class: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnDefinition
             - name: createdAt
               label: Created At
+              class: info.magnolia.ui.framework.action.AddNodeActionDefinition
               sortable: false
               expandRatio: 2.0
-              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              formatterClass: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnFormatter
               propertyName: createdAt
-              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition
+              class: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnDefinition
+
+
+
+
+
+
+
+
+
+

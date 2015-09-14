@@ -9,38 +9,62 @@ subApps:
     class: info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor
     contentConnector:
       serviceName: users
-      class: info.magnolia.services.restutils.app.contentconnector.HttpContentConnectorDefinition
+      class: info.magnolia.services.httputils.app.contentconnector.HttpContentConnectorDefinition
+    actions:
+      createUser:
+        icon: icon-add-item
+        class: info.magnolia.ui.api.action.ConfiguredActionDefinition
+        name: createUser
+        label: Create user
+      blockUser:
+        icon: icon-unpublish
+        class: info.magnolia.ui.api.action.ConfiguredActionDefinition
+        name: blockUser
+        label: Block user
+    actionbar:
+      defaultAction: createUser
+      sections:
+        - name: root
+          label: Users
+          groups:
+            - name: userActions
+              items:
+                - name: createUser
+                - name: blockUser
+          availability:
+            nodes: true
+            root: true
     workbench:
       editable: false
       contentViews:
         - name: list
-          class: info.magnolia.services.restutils.app.workbench.HttpResourceListPresenterDefinition
+          class: info.magnolia.services.httputils.app.workbench.HttpResourceListPresenterDefinition
           columns:
             - name: id
               label: Id
               sortable: true
               expandRatio: 2.0
-              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              formatterClass: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnFormatter
               propertyName: id
-              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition
+              class: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnDefinition
             - name: firstName
               label: First Name
               sortable: false
               expandRatio: 2.0
-              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              formatterClass: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnFormatter
               propertyName: firstName
-              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition
+              class: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnDefinition
             - name: lastName
               label: Last Name
               sortable: false
               expandRatio: 2.0
-              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              formatterClass: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnFormatter
               propertyName: lastName
-              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition
+              class: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnDefinition
             - name: memberSince
               label: Member Since
               sortable: false
               expandRatio: 2.0
-              formatterClass: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnFormatter
+              formatterClass: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnFormatter
               propertyName: memberSince
-              class: info.magnolia.services.restutils.app.workbench.columns.HttpResourceColumnDefinition
+              class: info.magnolia.services.httputils.app.workbench.columns.HttpResourceColumnDefinition
